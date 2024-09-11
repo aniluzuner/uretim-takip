@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function () {
   Route::get('gorevler', [ProductionController::class, 'GetProductionRecords'])->name('gorevler');
   Route::get('gorevler/{id}', [ProductionController::class, 'GetRecordsByUser'])->name('GetRecordsByUser');
   Route::get('Tasks/{mps}', [ProductionController::class, 'GetRecordsByMps'])->name('tasks.get.json');
-  Route::delete('DeleteRecords/{mps}', [ProductionController::class, 'DeleteRecords']);
+  Route::delete('DeleteRecords/{mps}', [ProductionController::class, 'DeleteRecords'])->name('DeleteRecords');
 
   Route::post('/productions/AddProductionRecord', [ProductionController::class, 'AddProductionRecord'])->name('AddProductionRecord');
 
